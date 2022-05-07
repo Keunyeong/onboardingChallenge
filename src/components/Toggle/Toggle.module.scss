@@ -1,0 +1,44 @@
+@use '../../styles/mixins/flexbox';
+@use '../../styles/constants/colors';
+
+.toggle {
+  position: relative;
+  box-sizing: content-box;
+  display: flex;
+  width: 200px;
+  height: 30px;
+  cursor: pointer;
+  background-color: aliceblue;
+  border: 2px solid aliceblue;
+  border-radius: 17px;
+}
+
+.selectBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100px;
+  height: 30px;
+  background-color: #6e6e6e;
+  border-radius: 15px;
+  transition: all 0.5s ease-out;
+
+  &.selected {
+    left: 100px;
+  }
+}
+
+.text {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  font-weight: 700;
+  transition: all 0.5s ease-out;
+
+  &.selected {
+    color: colors.$WHITE;
+  }
+}

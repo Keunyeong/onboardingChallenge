@@ -1,0 +1,87 @@
+/* stylelint-disable scale-unlimited/declaration-strict-value */
+@use '../../styles/mixins/flexbox';
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  height: 40px;
+  margin: 5px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.showBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 30px;
+  margin: 5px 0 5px 5px;
+  font-size: 20px;
+}
+
+.noText {
+  margin: 10px 0;
+  color: #9b9b9b;
+  text-align: center;
+}
+
+.dropdownBox {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 200px;
+  height: 0;
+  overflow: hidden;
+  border-radius: 5px;
+
+  &.isShow {
+    height: auto;
+    background-color: aliceblue;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.searchInput {
+  width: 190px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+}
+
+.selectBtn {
+  padding: 5px 0;
+  margin: 3px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+
+  &:hover {
+    background-color: burlywood;
+  }
+}
+
+.arrowDown {
+  width: 20px;
+  height: 20px;
+}
+
+.selectList {
+  display: flex;
+  flex-direction: column;
+  max-height: 100px;
+  overflow: scroll;
+}

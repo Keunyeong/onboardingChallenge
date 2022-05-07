@@ -1,0 +1,11 @@
+@use '../../styles/mixins/flexbox';
+
+.part {
+  @include flexbox.flexbox(center, center);
+  flex-direction: column;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #eaeaea;
+  border-radius: 20px;
+}
