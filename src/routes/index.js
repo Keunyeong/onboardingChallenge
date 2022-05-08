@@ -2,6 +2,7 @@ import Dropdown from '../components/dropdown'
 import Main from '../components/main'
 import Part from '../components/part'
 import Slider from '../components/slider'
+import Tab from '../components/tab'
 import Toggle from '../components/Toggle'
 import H1 from '../elements/H1'
 import styles from './Routes.module.scss'
@@ -21,6 +22,10 @@ function App() {
         <Part>
           <H1>Toggle</H1>
           <Toggle />
+        </Part>
+        <Part>
+          <H1>Tab</H1>
+          <Tab />
         </Part>
       </Main>
     </div>

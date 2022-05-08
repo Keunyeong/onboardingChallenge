@@ -1,0 +1,8 @@
+/* stylelint-disable scale-unlimited/declaration-strict-value */
+@use '../../styles/mixins/flexbox';
+
+.tab {
+  display: flex;
+  width: 300px;
+  border: 1px solid red;
+}
