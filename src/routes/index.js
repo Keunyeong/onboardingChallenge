@@ -1,4 +1,5 @@
 import Dropdown from '../components/dropdown'
+import Input from '../components/input'
 import Main from '../components/main'
 import Part from '../components/part'
 import Slider from '../components/slider'
@@ -26,6 +27,10 @@ function App() {
         <Part>
           <H1>Tab</H1>
           <Tab />
+        </Part>
+        <Part>
+          <H1>Input</H1>
+          <Input />
         </Part>
       </Main>
     </div>

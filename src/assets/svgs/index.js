@@ -1,2 +1,6 @@
 export { ReactComponent as LogoImage } from './logo.svg'
 export { ReactComponent as ArrowDown } from './arrow_down.svg'
+export { ReactComponent as TrueIcon } from './trueIcon.svg'
+export { ReactComponent as FalseIcon } from './falseIcon.svg'
+export { ReactComponent as OnEye } from './onEye.svg'
+export { ReactComponent as OffEye } from './offEye.svg'
