@@ -1,8 +1,5 @@
 import styles from './Slider.module.scss'
 import { useState } from 'react'
-import classnames from 'classnames'
-
-const RATEARRAY = [1, 25, 50, 75, 100]
 // eslint-disable-next-line react/prop-types
 export default function Slider() {
   const [range, setRange] = useState(1)
