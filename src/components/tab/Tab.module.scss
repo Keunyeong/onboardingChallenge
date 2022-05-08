@@ -1,8 +1,56 @@
 /* stylelint-disable scale-unlimited/declaration-strict-value */
 @use '../../styles/mixins/flexbox';
+$MENUCOUNT: 3;
 
 .tab {
   display: flex;
-  width: 300px;
-  border: 1px solid red;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 40px;
+}
+
+.menuBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.menuText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 600;
+  color: #c5c5c5;
+  cursor: pointer;
+  border-bottom: 5px solid #c5c5c5;
+  transition: all 0.5s ease-out;
+
+  &.selected {
+    color: #009408;
+  }
+}
+
+.menuSlider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  /* stylelint-disable-next-line scss/operator-no-unspaced */
+  width: calc(280px / $MENUCOUNT);
+  height: 5px;
+  background-color: #009408;
+  border-radius: 3px;
+  transition: all 0.5s ease-out;
+  @for $num from 0 to 10 {
+    &.slider#{$num} {
+      /* stylelint-disable-next-line scss/operator-no-unspaced */
+      left: calc(280px / $MENUCOUNT * $num);
+    }
+  }
 }
