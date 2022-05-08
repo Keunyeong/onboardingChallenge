@@ -1,7 +1,8 @@
 import styles from './Dropdown.module.scss'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { ArrowDown } from '../../assets/svgs'
 import classnames from 'classnames'
+import useOnClickOutside from '../hooks/useOnClickOutSide'
 
 const CONTENTS = [
   { id: 1, content: 'banana' },
@@ -18,6 +19,8 @@ export default function Dropdown() {
   const [search, setSearch] = useState('')
   const [list, setList] = useState(CONTENTS)
   const [isShow, setIsShow] = useState(false)
+  const dropdownBox = useRef()
+  useOnClickOutside(dropdownBox, () => setIsShow(false))
 
   const handleIsShowClick = () => {
     setIsShow((prev) => !prev)
@@ -42,7 +45,7 @@ export default function Dropdown() {
       <button type='button' className={styles.btn} onClick={handleIsShowClick}>
         <ArrowDown className={styles.arrowDown} />
       </button>
-      <div className={classnames(styles.dropdownBox, { [styles.isShow]: isShow })}>
+      <div className={classnames(styles.dropdownBox, { [styles.isShow]: isShow })} ref={dropdownBox}>
         <input
           type='text'
           className={styles.searchInput}

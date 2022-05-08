@@ -1,0 +1,64 @@
+/* stylelint-disable scale-unlimited/declaration-strict-value */
+@use '../../styles/mixins/flexbox';
+@use '../../styles/constants/colors';
+
+$RANGEWIDTH: 260px;
+
+input[type='range'] {
+  width: $RANGEWIDTH;
+  height: 24px;
+  margin: 10px 0;
+  overflow: hidden;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  box-sizing: border-box;
+  width: $RANGEWIDTH;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #ff96ab;
+  border-radius: 17px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: #ff494f;
+  border: 3px solid white;
+  border-radius: 100%;
+  box-shadow: -210px 0 0 200px #ff80a2;
+  -webkit-appearance: none;
+}
+
+.sliderPoint {
+  display: flex;
+  justify-content: space-between;
+  width: 290px;
+  padding: 5px;
+}
+
+@for $num from 1 to 101 {
+  .point#{$num} {
+    width: 40px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: #ff494f;
+    border-radius: 20px;
+
+    &:hover {
+      color: #ff494f;
+      background-color: white;
+    }
+  }
+}
